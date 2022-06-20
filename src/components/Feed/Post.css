@@ -1,0 +1,41 @@
+.post{
+    display : flex;
+    padding: var(--feed-element-padding);
+
+    border-top: 1px solid var(--extra-light-grey);
+}
+
+.post-header{
+    display : flex;
+    align-items: flex-end;
+}
+
+.post-header-body-footer{
+    flex: 1;
+}
+
+.post-image>img{
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.post-displayname{
+    font-weight: 550;
+}
+
+.post-username{
+    color:var(--dark-grey);
+    font-weight: 350;
+}
+
+.post-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-verifiedicon-badge{
+    color : var(--general-blue-color);
+    font-size: 20px !important;
+    align-items: center;
+}

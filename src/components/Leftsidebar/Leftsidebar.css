@@ -1,0 +1,24 @@
+.leftsidebar{
+    border-right: 1px solid var(--extra-light-grey);
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    flex: 0.2;
+}
+.tweet-button{
+    background-color : var(--general-blue-color) !important;
+    color : white !important;
+    border: none !important;
+    font-weight: 900 !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+    text-transform: inherit !important;
+}
+
+.twitter-icon{
+    color: var(--general-blue-color);
+    font-size: 30px !important;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}

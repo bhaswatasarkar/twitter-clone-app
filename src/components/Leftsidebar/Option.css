@@ -1,0 +1,19 @@
+.option{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option:hover{
+    border-radius: 50px;
+    background-color : var(--extra-light-grey);
+    transition: color 100ms ease-out;
+}
+
+.option > .option-text{
+    font-size: 20px;
+}
+
+.option > .MuiSvgIcon-root{
+    padding : 15px;
+}

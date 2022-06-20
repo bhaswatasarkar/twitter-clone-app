@@ -1,0 +1,22 @@
+.news{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news-image{
+    height: 65px;
+    width: 65px;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.news-header{
+    font-size: 12px;
+    color:var(--dark-grey);
+}
+
+.news-footer{
+    font-size: 12px;
+    color:var(--dark-grey);
+}
