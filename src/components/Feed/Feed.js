@@ -11,12 +11,38 @@ function Feed() {
         <AutoAwesomeOutlinedIcon className='top-right-feed-icon'/>
       </div>
       <Tweetbox/>
-      <Post username={'bhaswatasarkar'} displayname={'Bhaswata Sarkar'}/>
-      <Post username={'bhaswatasarkar'} displayname={'Bhaswata Sarkar'}/>
-      <Post username={'bhaswatasarkar'} displayname={'Bhaswata Sarkar'}/>
-      <Post username={'bhaswatasarkar'} displayname={'Bhaswata Sarkar'}/>
-      <Post username={'bhaswatasarkar'} displayname={'Bhaswata Sarkar'}/>
-      <Post username={'bhaswatasarkar'} displayname={'Bhaswata Sarkar'}/>
+      <Post
+       username={'bhaswatasarkar'}
+       displayname={'Bhaswata Sarkar'}
+       verified={true}
+       text={'hey its working'}
+       avatarimage={'https://picsum.photos/201'}
+       image="https://picsum.photos/200"
+       />
+      <Post
+       username={'bhaswatasarkar'}
+       displayname={'Bhaswata Sarkar'}
+       verified
+       text={'hey its working'}
+       avatarimage={'https://picsum.photos/201'}
+       image="https://picsum.photos/200"
+       />
+       <Post
+       username={'bhaswatasarkar'}
+       displayname={'Bhaswata Sarkar'}
+       verified={false}
+       text={'hey its working'}
+       avatarimage={'https://picsum.photos/201'}
+       image="https://picsum.photos/200"
+       />
+       <Post
+       username={'bhaswatasarkar'}
+       displayname={'Bhaswata Sarkar'}
+       verified={false}
+       text={'hey its working'}
+       avatarimage={'https://picsum.photos/201'}
+       image="https://picsum.photos/200"
+       />
      
      
     </div>

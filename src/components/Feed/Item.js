@@ -1,9 +1,9 @@
 import React from 'react'
 import './Item.css'
-function Item({Icon,num}) {
+function Item({Icon,num,design}) {
   return (
-    <div classname='item'>
-        <Icon classname='icon'/>{num}
+    <div className={`item ${design}`}>
+        <Icon className='item-icon'/><div className='item-text'>{num}</div>
     </div>
   )
 }

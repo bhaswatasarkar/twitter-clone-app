@@ -8,31 +8,31 @@ import RepeatRoundedIcon from '@mui/icons-material/RepeatRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import IosShareRoundedIcon from '@mui/icons-material/IosShareRounded';
 import Item from './Item.js';
-function Post({avatarimage,displayname,username,text,image,num_replies,num_retweets,num_likes}) {
+function Post({avatarimage,displayname,username,text,image,num_replies,num_retweets,num_likes,verified}) {
   return (
     <div className='post'>
       <div classname='post-avatar'>
-        <Avatar className='avatar' alt="Bhaswata Sarkar" src="/static/images/avatar/1.jpg" />
+        <Avatar className='avatar' alt="Bhaswata Sarkar" src={avatarimage} />
       </div>
       <div className='post-header-body-footer'>
         <div className='post-header'>
           <div className="post-displayname">{displayname}</div>
-          <VerifiedRoundedIcon className='post-verifiedicon-badge'/>
+          {verified && <VerifiedRoundedIcon className='post-verifiedicon-badge'/>}
           <div className='post-username'>&nbsp;@{username}</div>
         </div>
         <div className='post-body'>
           <div className='post-text'>
-            Lorem adipisicing quis aute qui consequat.
+            {text}
           </div> 
           <div className='post-image'>
-            <img src="https://picsum.photos/200" alt=''/>
+            <img src={image} alt=''/>
           </div>
         </div>
         <div className='post-footer'>
-          <Item Icon={ChatBubbleOutlineRoundedIcon} num={1000}/>
-          <Item Icon={RepeatRoundedIcon} num={1000}/>
-          <Item Icon={FavoriteBorderRoundedIcon} num={1000}/>
-          <Item Icon={IosShareRoundedIcon}/>
+          <Item Icon={ChatBubbleOutlineRoundedIcon} num={1000} design={'post-footer-item'}/>
+          <Item Icon={RepeatRoundedIcon} num={1000} design={'post-footer-item'}/>
+          <Item Icon={FavoriteBorderRoundedIcon} num={1000} design={'post-footer-item'}/>
+          <Item Icon={IosShareRoundedIcon} design={'post-footer-item'}/>
         </div>
       </div>
     </div>

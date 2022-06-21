@@ -1,4 +1,5 @@
 .item{
-    display: flex;
-    background-color: var(--general-blue-color)!important;
+    display: flex !important;
+    
+    
 }
