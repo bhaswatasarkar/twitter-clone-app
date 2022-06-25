@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Tweetbox.css'
 import Item from './Item.js';
 import Avatar from '@mui/material/Avatar';
@@ -10,15 +10,29 @@ import AlignHorizontalLeftOutlinedIcon from '@mui/icons-material/AlignHorizontal
 import SentimentSatisfiedOutlinedIcon from '@mui/icons-material/SentimentSatisfiedOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-
+import db from '../../firebase';
 
 function Tweetbox() {
+
+  const[tweetmessage,setTweetmessage] = useState("");
+
+  const postTweet = (e)=>{
+    e.preventDefault();
+    db.collection('posts').add({
+      username:"clementinamaribel",
+      displayname:"Clementina Maribel",
+      verified:false,
+      text:tweetmessage,
+      avatarimage:"https://i.pravatar.cc/150?img=5"
+      })
+      setTweetmessage("");
+  }
   return (
     <div className='tweetbox'>
       <form>
           <div className='avatar-tweettextbox'>
-            <Avatar className='avatar' alt="Bhaswata Sarkar" src="/static/images/avatar/1.jpg" />
-            <input className='tweettextbox' placeholder="What's happening?"></input>
+            <Avatar className='avatar' alt="Clementina Maribel" src="https://i.pravatar.cc/150?img=5" />
+            <input value={tweetmessage} className='tweettextbox' placeholder="What's happening?" type='text' onChange={e=>setTweetmessage(e.target.value)}></input>
           </div>
 
           <div className='otherinputs-tweetbutton'>
@@ -30,7 +44,7 @@ function Tweetbox() {
               <Item Icon={CalendarTodayOutlinedIcon}/>
               <Item Icon={FmdGoodOutlinedIcon}/>
             </Stack>  
-            <Button className='tweet-button-tweetbox'>Tweet</Button>
+            <Button onClick={postTweet} className='tweet-button-tweetbox'>Tweet</Button>
           </div>
 
         </form>
