@@ -1,7 +1,7 @@
 import React from 'react'
 import './Rightwidgetbar.css'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import News from './News.js'
+import NewsList from './NewsList';
 function Rightwidgetbar() {
   return (
     <div className='rightwidgetbar'>
@@ -13,13 +13,10 @@ function Rightwidgetbar() {
       <div className='news-container'>
         <div className='news-container-header'>What's happening</div>
         <div className='news-components'>
-          <News/>
-          <News/>
-          <News/>
-          <News/>
-          <News/>
+          <NewsList/>
+          
         </div>
-        <div className='news-container-footer'>What's happening</div>
+        <div className='news-container-footer'>Show more</div>
       </div>
 
     </div>

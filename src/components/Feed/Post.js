@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './Post.css'
 import './Item.js'
 import Avatar from '@mui/material/Avatar';
@@ -7,18 +7,21 @@ import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineR
 import RepeatRoundedIcon from '@mui/icons-material/RepeatRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import IosShareRoundedIcon from '@mui/icons-material/IosShareRounded';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Item from './Item.js';
-function Post({avatarimage,displayname,username,text,image,num_replies,num_retweets,num_likes,verified}) {
+const Post = forwardRef(
+({avatarimage,displayname,username,text,image,num_replies,num_retweets,num_likes,verified},ref) =>{
   return (
-    <div className='post'>
-      <div classname='post-avatar'>
-        <Avatar className='avatar' alt="Bhaswata Sarkar" src={avatarimage} />
+    <div className='post' ref={ref}>
+      <div className='post-avatar'>
+        <Avatar className='avatar' alt="" src={avatarimage} />
       </div>
       <div className='post-header-body-footer'>
         <div className='post-header'>
           <div className="post-displayname">{displayname}</div>
           {verified && <VerifiedRoundedIcon className='post-verifiedicon-badge'/>}
           <div className='post-username'>&nbsp;@{username}</div>
+          <div className='post-options-dropdown'><MoreHorizIcon/></div>
         </div>
         <div className='post-body'>
           <div className='post-text'>
@@ -37,6 +40,6 @@ function Post({avatarimage,displayname,username,text,image,num_replies,num_retwe
       </div>
     </div>
   )
-}
+})
 
 export default Post

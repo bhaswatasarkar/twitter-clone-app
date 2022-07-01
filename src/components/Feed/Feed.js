@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Tweetbox from'./Tweetbox.js';
 import './Feed.css'
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import Post from './Post'
+import db from '../../firebase'
+import FlipMove from 'react-flip-move'
+
 function Feed() {
+  const [posts,setPosts] = useState([])
+
+  useEffect(()=>{
+    db.collection('posts').onSnapshot(snapshot=>(
+      setPosts(snapshot.docs.map(doc=>({id: doc.id, ...doc.data()})))))
+      },[]);
+
   return (
     <div className='feed'>
       <div className='feed-top'>
@@ -11,39 +21,19 @@ function Feed() {
         <AutoAwesomeOutlinedIcon className='top-right-feed-icon'/>
       </div>
       <Tweetbox/>
-      <Post
-       username={'bhaswatasarkar'}
-       displayname={'Bhaswata Sarkar'}
-       verified={true}
-       text={'hey its working'}
-       avatarimage={'https://picsum.photos/201'}
-       image="https://picsum.photos/200"
-       />
-      <Post
-       username={'bhaswatasarkar'}
-       displayname={'Bhaswata Sarkar'}
-       verified
-       text={'hey its working'}
-       avatarimage={'https://picsum.photos/201'}
-       image="https://picsum.photos/200"
-       />
-       <Post
-       username={'bhaswatasarkar'}
-       displayname={'Bhaswata Sarkar'}
-       verified={false}
-       text={'hey its working'}
-       avatarimage={'https://picsum.photos/201'}
-       image="https://picsum.photos/200"
-       />
-       <Post
-       username={'bhaswatasarkar'}
-       displayname={'Bhaswata Sarkar'}
-       verified={false}
-       text={'hey its working'}
-       avatarimage={'https://picsum.photos/201'}
-       image="https://picsum.photos/200"
-       />
-     
+      <FlipMove>
+        {posts.map(post=>(
+          <Post
+          key={post.id}
+          username={post.username}
+          displayname={post.displayname}
+          verified={post.verified}
+          text={post.text}
+          avatarimage={post.avatarimage}
+          image={post.image}
+          />
+        ))}
+      </FlipMove>  
      
     </div>
   )

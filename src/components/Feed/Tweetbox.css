@@ -23,11 +23,12 @@
 }
 .avatar-tweettextbox{
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 15px;  
 }
 
 .avatar{
     margin-right : 15px;
+    cursor: pointer;
 }
 
 .tweettextbox{
@@ -43,5 +44,5 @@
 .otherinputs{
     color: var(--general-blue-color);
     margin-left: 50px;
-    
+
 }
