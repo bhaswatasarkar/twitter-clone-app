@@ -7,6 +7,7 @@ import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineR
 import RepeatRoundedIcon from '@mui/icons-material/RepeatRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import IosShareRoundedIcon from '@mui/icons-material/IosShareRounded';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Item from './Item.js';
 const Post = forwardRef(
 ({avatarimage,displayname,username,text,image,num_replies,num_retweets,num_likes,verified},ref) =>{
@@ -20,6 +21,7 @@ const Post = forwardRef(
           <div className="post-displayname">{displayname}</div>
           {verified && <VerifiedRoundedIcon className='post-verifiedicon-badge'/>}
           <div className='post-username'>&nbsp;@{username}</div>
+          <div className='post-options-dropdown'><MoreHorizIcon/></div>
         </div>
         <div className='post-body'>
           <div className='post-text'>
