@@ -3,14 +3,14 @@ import Tweetbox from'./Tweetbox.js';
 import './Feed.css'
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import Post from './Post'
-import db from '../../firebase'
+import Firebase from '../../firebase'
 import FlipMove from 'react-flip-move'
 
 function Feed() {
   const [posts,setPosts] = useState([])
 
   useEffect(()=>{
-    db.collection('posts').onSnapshot(snapshot=>(
+    Firebase.db.collection('posts').onSnapshot(snapshot=>(
       setPosts(snapshot.docs.map(doc=>({id: doc.id, ...doc.data()})))))
       },[]);
 
