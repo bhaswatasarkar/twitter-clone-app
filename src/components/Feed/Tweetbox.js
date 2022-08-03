@@ -10,7 +10,7 @@ import AlignHorizontalLeftOutlinedIcon from '@mui/icons-material/AlignHorizontal
 import SentimentSatisfiedOutlinedIcon from '@mui/icons-material/SentimentSatisfiedOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-import db from '../../firebase';
+import Firebase from '../../firebase';
 
 function Tweetbox() {
 
@@ -18,7 +18,7 @@ function Tweetbox() {
 
   const postTweet = (e)=>{
     e.preventDefault();
-    db.collection('posts').add({
+    Firebase.db.collection('posts').add({
       username:"clementinamaribel",
       displayname:"Clementina Maribel",
       verified:false,

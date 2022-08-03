@@ -1,0 +1,11 @@
+.default{
+    flex: 0.5;
+    margin: auto;
+}
+
+.default-text{
+    text-align: center;
+    color: var(--general-blue-color);
+    font-size: 15px;
+    
+}

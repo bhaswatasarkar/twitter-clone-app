@@ -32,7 +32,7 @@ function NewsItemConfigure({index}){
     />)
 }
 
-if(articles.length>0){
+if(articles.length>5){
 
 //   var n = Math.floor(Math.random()*articles.length)
 //   n = n%articles.length;

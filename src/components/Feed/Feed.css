@@ -1,5 +1,5 @@
 .feed{
-    border-right: 1px solid var(--extra-light-grey);
+    
     flex: 0.5;
     min-width: fit-content;
     overflow-y: scroll;
