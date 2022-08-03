@@ -1,12 +1,12 @@
 import React from 'react'
 import './NewsItem.css'
-function NewsItem({sourcename,author,title,urlToImage}) {
+function NewsItem({sourcename,author,title,urlToImage,sectionName}) {
     
         return (
             <div className='news'>
                 <div className='news-content'>
                     <div className='news-header'>
-                        {sourcename} &bull; {author}
+                        {sourcename} {author && <>&bull; {author}</>}
                     </div>
 
                     <div className='news-body'>
@@ -14,7 +14,7 @@ function NewsItem({sourcename,author,title,urlToImage}) {
                     </div>
 
                     <div className='news-footer'>
-                        127K Tweets
+                        {sectionName}
                     </div>
                 </div>
                 <img src={urlToImage} alt='' className='news-image'/>
