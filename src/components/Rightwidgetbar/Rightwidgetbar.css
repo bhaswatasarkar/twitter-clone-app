@@ -1,7 +1,7 @@
 .rightwidgetbar{
     flex: 0.3;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-left: 1px solid var(--extra-light-grey);
 }
 
@@ -41,4 +41,9 @@
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 20px;
+}
+
+#news-components-error{
+    margin-top: 10px;
+    /* color: var(--general-blue-color); */
 }
