@@ -1,13 +1,13 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './Rightwidgetbar.css'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import NewsList from './NewsList';
 function Rightwidgetbar() {
   const[searchString,setSearchString] = useState("");
-  useEffect(() => {
-    document.title = searchString
-})
+//   useEffect(() => {
+//     document.title = searchString
+// })
 
   return (
     <div className='rightwidgetbar'>

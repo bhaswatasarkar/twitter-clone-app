@@ -14,7 +14,7 @@ import Button from '@mui/material/Button';
 function Leftsidebar() {
   return (
     <div className='leftsidebar'>
-        <TwitterIcon  className='twitter-icon'/>
+        <TwitterIcon  id='twitter-icon'/>
 
         <Option Icon={HomeOutlinedIcon} text="Home"/>
         <Option Icon={TagIcon} text="Explore"/>
